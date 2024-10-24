@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+/* Basic reset and styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    width: 100%;
+    height: 100%;
+    background-color: #1b1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+    flex-direction: column;
+}
+  
+  #navbar {
+    background-color: #007bff;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  #navbar ul {
+    list-style-type: none;
+  }
+  
+  #navbar li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  #navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  
+  #navbar a:hover {
+    color: #ddd;
+  }
+  
+  #features {
+    padding: 40px;
+    flex: 1;  /* Ensure content takes full space before footer */
+  }
+  
+  .feature-section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .feature-section h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+  
+  .feature-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  
+  .feature-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  .feature-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  #footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  #footer p {
+    margin: 10px 0;
+  }
+  #footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  #footer ul li:nth-child(1){
+    list-style: none;
+  }
+  
+  #footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #navbar ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    #navbar li {
+      margin: 10px 0;
+    }
+  }
+  
+  header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav li {
+    margin-right: 20px;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .nav li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .nav li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .nav li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .nav li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .nav li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "Protest Guerrilla", sans-serif;
+    transition: color 0.2s ease;
+  }
+  
+  .nav a:hover {
+    color: #ccc;
+  }
+  
+  .nav .active {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+  }
+  
+  .nav li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav li:hover::before {
+    transform: scaleX(1);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #username{
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Protest Guerrilla", sans-serif;
+    letter-spacing: 2px;
+}
+.username  .logout {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6b6b6b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    font-family: "Protest Guerrilla", sans-serif;
+    transition: transform 0.2s ease-in-out;
+}
+  
+  .logout:hover {
+    transform: scale(1.1);
+    background-color: #b6b6b6;
+  }
+  .menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 13px;
+    background-color: #6b6b6b;
+    color: white;
+    letter-spacing: 2px;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+.menu-toggle:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  /* Responsive  */
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    
+  }
+
+.sidenav {
+    height: 100%; /* Full-height */
+    width: 0; /* Set to 0 width initially */
+    position: fixed; /* Fixed Sidebar */
+    top: 0;
+    left: 0;
+    background-color: #333; /* Dark background color */
+    overflow-x: hidden; /* No horizontal scroll */
+    transition: 0.5s; /* Transition effect for sliding */
+    padding-top: 60px; /* Padding at the top */
+}
+
+.sidenav a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-left: 20px;
+    padding: 20px;
+}

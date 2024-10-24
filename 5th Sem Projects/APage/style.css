@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: #333;
+    color: #212121;
+    font-size: 12px;
+    min-height: 100%;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/* AI CODE */
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav li {
+    margin-right: 20px;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  
+  .nav li:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .nav li:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .nav li:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .nav li:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
+  .nav li:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: "Protest Guerrilla", sans-serif;
+    transition: color 0.2s ease;
+  }
+  
+  .nav a:hover {
+    color: #ccc;
+  }
+  
+  .nav .active {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+  }
+  
+  .nav li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav li:hover::before {
+    transform: scaleX(1);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+/* AI CODE END */
+
+
+
+.username{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+#username{
+    color: white;
+    font-size: 1.4rem;
+    font-family: "Protest Guerrilla", sans-serif;
+    letter-spacing: 2px;
+}
+.username .logout {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #6b6b6b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    font-family: "Protest Guerrilla", sans-serif;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .logout:hover {
+    transform: scale(1.1);
+    background-color: #b6b6b6;
+  }
+
+.menu-toggle {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 13px;
+    background-color: #6b6b6b;
+    color: white;
+    letter-spacing: 2px;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+.menu-toggle:hover {
+    background-color: #444;
+    color: #fff;
+  }
+  /* Responsive  */
+  @media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    
+  }
+
+.sidenav {
+    height: 100%; /* Full-height */
+    width: 0; /* Set to 0 width initially */
+    position: fixed; /* Fixed Sidebar */
+    top: 0;
+    left: 0;
+    background-color: #333; /* Dark background color */
+    overflow-x: hidden; /* No horizontal scroll */
+    transition: 0.5s; /* Transition effect for sliding */
+    padding-top: 60px; /* Padding at the top */
+}
+
+.sidenav a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.main-content {
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.section-header {
+    display: block;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+section {
+    padding-top: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+section a, section a:link, section a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+.Carousel-slider {
+    height: 560px;
+    position: relative;
+    width: 100%;
+}
+
+.Carousel-slider.fullwidth {
+    height: 500px;
+}
+
+.Carousel-slider.fullwidth .slider-item {
+    height: 480px;
+    line-height: 480px;
+    width: 100%
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 0 50%;
+	perspective: 800px  !important;
+}
+
+.slider-item {
+    box-shadow: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.12);
+    display: none;
+    height: 320px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 320px;
+    cursor: pointer;
+	border: 5px solid #ffc107;
+}
+
+.indicators {
+	top: 0;
+    left: 50%;
+    padding: 0;
+    list-style-type: none;
+    margin: 40px 0 0 -77px;
+    position: absolute;
+}
+
+.indicators li {
+    color: #255f8b;
+    float: left;
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.indicators li:last-child {margin: 0;}
+.indicators a {
+    background: #00416a;
+    border-radius: 8px;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.indicators .active a {
+	background: #e4e5e6;
+
+}
+.superHero1 img, .superHero2 img, .superHero3 img, .superHero4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+.superHero1 {background-image: url(img/img1.jpg); border-radius: 50px !important;}
+.superHero2 {background: url(img/superhero2.jpg); border-radius: 50px !important;}
+.superHero3 {background: url(img/superhero3.jpg); border-radius: 50px !important;}
+.superHero4 {background: url(img/superhero4.jpg); border-radius: 50px !important;}
+
+
+.line{
+    height: 10px;
+    background-color: #212121;
+}
+.about-page-info{
+    padding: 20px;
+    display: flex;
+}
+.about-page-info .left{
+    width: 65%;
+}
+.about-page-info .left h2{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+.about-page-info .left p{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    }
+.about-page-info .right{
+    width: 35%;
+}
+.about-page-info .right img{
+    width: 80%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    }
+.about-page-info .left{
+    width: 65%;
+    padding-left: 2rem;
+}
+.about-page-info .left h2{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+.about-page-info .left p{
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    }
+.about-page-info .right{
+    width: 35%;
+}
+.about-page-info .right img{
+    width: 80%;
+    height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    }
+    /* Duplicate */
+    .about-page-info .right-rr{
+      width: 72%;
+  }
+  .about-page-info .right-rr h2{
+      font-size: 2rem;
+      letter-spacing: 5px;
+      text-align: center;
+      color: white;
+      font-family: "Protest Guerrilla", sans-serif;
+  }
+  .about-page-info .right-rr p{
+      font-size: 1.2rem;
+      color: white;
+      text-align: center;
+      }
+  .about-page-info .left-im{
+      width: 28%;
+  }
+  .about-page-info .left-im img{
+      width: 80%;
+      height: 250px;
+      object-fit: contain;
+      border-radius: 10px;
+      }

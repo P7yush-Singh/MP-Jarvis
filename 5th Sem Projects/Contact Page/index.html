@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <navbar class="nav">
+          <ul>
+            <li><a href="../index.html" >Home</a></li>
+            <li><a href="../Features/index.html">Features</a></li>
+            <li><a href="../APage/index.html">About Us</a></li>
+            <li><a href="#" class="active">Contact</a></li>
+          </ul>
+        </navbar>
+    
+    
+     <span class="menu-toggle" onclick="openNav()">&#9776; Menu</span>
+    
+        <!-- Slide Menu -->
+        <div id="slideMenu" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="logout" onclick="logout()">Logout</button>
+    
+        
+    </header>
+
+    <div class="container">
+		<main class="row">
+			<section class="col left">
+			
+				<div class="contactTitle">
+					<h2>Get In Touch</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+				</div>
+
+				<div class="contactInfo">
+					
+					<div class="typewriter"><span class="typewriter-text"></span><label for="">|</label></div>
+
+				</div>
+				<div class="socialMedia">
+					<a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+			</section>
+
+			<!--  *******   Left Section (Column) Ends   *******  -->
+
+			<!--  *******   Right Section (Column) Starts   *******  -->
+
+			<section class="col right">
+				
+				<!--  *******   Form Starts   *******  -->
+
+				<div class="container-f">
+          <form action="https://api.web3forms.com/submit" method="POST">
+                      <h1>Leave your Suggestion or queries here</h1>
+                      <input type="hidden" name="access_key" value="f6c0ed9b-d41d-4896-aba4-c6ca75f6ec50">
+
+                      
+                      <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                      <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                      <input type="email" id="email" name="email" placeholder="Email" required>
+                      <input type="text" id="mobile" name="mobile" placeholder="Mobile">
+                      <h4>Type Your Message Here...</h4>
+                      <textarea required></textarea>
+                      <input type="submit" value="Send" id="button">
+                    </form>
+                  </div>
+
+				<!--  *******   Form Ends   *******  -->
+			</section>
+
+			<!--  *******   Right Section (Column) Ends   *******  -->
+
+		</main>
+	</div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Function to open the slide menu
+        function openNav() {
+            document.getElementById("slideMenu").style.width = "250px";
+        }
+  
+        // Function to close the slide menu
+        function closeNav() {
+            document.getElementById("slideMenu").style.width = "0";
+        }
+    </script>
+</body>
+</html>

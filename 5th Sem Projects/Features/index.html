@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the powerful features of Jarvis, your AI-powered personal assistant.">
+  <title>Jarvis Features</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <!-- NavBar -->
+    <header>
+        <navbar class="nav">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#" class="active">Features</a></li>
+            <li><a href="../APage/index.html">About Us</a></li>
+            <li><a href="../Contact Page/index.html">Contact</a></li>
+          </ul>
+        </navbar>
+    
+    
+     <span class="menu-toggle" onclick="openNav()">&#9776; Menu</span>
+    
+        <!-- Slide Menu -->
+        <div id="slideMenu" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="username">
+          <button class="logout" onclick="logout()">Logout</button>
+    
+        </div>
+    
+        
+    </header>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#task-management">Task Management</a></li>
+      <li><a href="#nlp">Natural Language Processing</a></li>
+      <li><a href="#data-analysis">Data Analysis & Insights</a></li>
+      <li><a href="#content-creation">Content Creation Assistance</a></li>
+      <li><a href="#automation">Automation & Custom Workflows</a></li>
+      <li><a href="#security">Secure & Privacy-Focused</a></li>
+      <li><a href="#collaboration">Collaborative Features</a></li>
+    </ul>
+  </nav>
+
+  <!-- Features Section -->
+  <div id="features">
+    <section id="task-management" class="feature-section">
+      <h2>Smart Task Management</h2>
+      <p>Jarvis helps you stay organized by managing your to-dos, tasks, and deadlines. Set reminders, create action items, and track progress effortlessly.</p>
+      <ul>
+        <li>Automated Scheduling</li>
+        <li>Task Prioritization</li>
+      </ul>
+    </section>
+
+    <section id="nlp" class="feature-section">
+      <h2>Natural Language Processing</h2>
+      <p>Communicate with Jarvis as if you were speaking to a human. With advanced NLP capabilities, Jarvis understands context, intent, and even subtle nuances in conversation.</p>
+      <ul>
+        <li>Text and Voice Input</li>
+        <li>Smart Suggestions</li>
+      </ul>
+    </section>
+
+    <section id="data-analysis" class="feature-section">
+      <h2>Data Analysis & Insights</h2>
+      <p>Jarvis can help you analyze data, draw conclusions, and generate reports with ease. Whether it’s financial data, customer feedback, or performance metrics, Jarvis makes data analysis effortless.</p>
+      <ul>
+        <li>Customizable Reports</li>
+        <li>Actionable Insights</li>
+      </ul>
+    </section>
+
+    <section id="content-creation" class="feature-section">
+      <h2>Content Creation Assistance</h2>
+      <p>Whether you're writing emails, blog posts, or social media updates, Jarvis can help generate high-quality content in seconds.</p>
+      <ul>
+        <li>Text Generation</li>
+        <li>Grammar & Style Check</li>
+      </ul>
+    </section>
+
+    <section id="automation" class="feature-section">
+      <h2>Automation & Custom Workflows</h2>
+      <p>Jarvis helps automate repetitive tasks and create custom workflows to optimize your routine. Whether you need to schedule posts, send reports, or update records, Jarvis can handle it.</p>
+      <ul>
+        <li>Custom Commands</li>
+        <li>Trigger-Based Actions</li>
+      </ul>
+    </section>
+
+    <section id="security" class="feature-section">
+      <h2>Secure & Privacy-Focused</h2>
+      <p>Your data security and privacy are our top priority. Jarvis adheres to the highest standards of encryption and data protection.</p>
+      <ul>
+        <li>End-to-End Encryption</li>
+        <li>Privacy Controls</li>
+      </ul>
+    </section>
+
+    <section id="collaboration" class="feature-section">
+      <h2>Collaborative Features</h2>
+      <p>Jarvis isn't just for individuals—it’s designed to work with teams too. Share tasks, collaborate on projects, and manage team workflows all within one platform.</p>
+      <ul>
+        <li>Team Collaboration</li>
+        <li>Shared Task Management</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Jarvis. All Rights Reserved.</p>
+      <ul>
+        <li>PIYUSH SINGH</li>
+        <li>Priyanshu</li>
+        <li>Rahul Kumar</li>
+        <li>Mehtab Ali</li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Function to open the slide menu
+    function openNav() {
+        document.getElementById("slideMenu").style.width = "250px";
+    }
+
+    // Function to close the slide menu
+    function closeNav() {
+        document.getElementById("slideMenu").style.width = "0";
+    }
+</script>
+</body>
+</html>

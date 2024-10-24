@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A virtual assistant</title>
+  <link rel="shortcut icon" href="Assests/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <navbar class="nav">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="Features/index.html">Features</a></li>
+        <li><a href="APage/index.html">About Us</a></li>
+        <li><a href="Contact Page/index.html">Contact</a></li>
+      </ul>
+    </navbar>
+
+
+ <span class="menu-toggle" onclick="openNav()">&#9776; Menu</span>
+
+    <!-- Slide Menu -->
+    <div id="slideMenu" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+
+    <div class="username">
+      <button class="logout" onclick="logout()">Logout</button>
+
+    </div>
+
+    
+</header>
+    <img src="Assests/logo.jpg" alt="logo" id="logo">
+    <h1>I'm <span id="name">X</span>, A <span id="va">Virtual Assistant</span></h1>
+    <img src="Assests/voice.gif" alt="voice" id="voice">
+    <button id="btn"><img src="Assests/mic.svg" alt="mic"><span id="content"> Click here for talk to me</span> </button>
+
+
+    <script src="script.js"></script>
+    <script>
+      // Function to open the slide menu
+      function openNav() {
+          document.getElementById("slideMenu").style.width = "250px";
+      }
+
+      // Function to close the slide menu
+      function closeNav() {
+          document.getElementById("slideMenu").style.width = "0";
+      }
+  </script>
+</body>
+</html>

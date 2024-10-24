@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav {
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li {
+  margin-right: 20px;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.nav li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nav li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.nav li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.nav li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.nav li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: "Protest Guerrilla", sans-serif;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #ccc;
+}
+
+.nav .active {
+  color: #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.nav li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav li:hover::before {
+  transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* AI CODE END */
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 13px;
+  background-color: #6b6b6b;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+.menu-toggle:hover {
+  background-color: #444;
+  color: #fff;
+}
+/* Responsive  */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+  .nav{
+      display: none;
+  }
+  
+}
+
+.sidenav {
+  height: 100%; /* Full-height */
+  width: 0; /* Set to 0 width initially */
+  position: fixed; /* Fixed Sidebar */
+  top: 0;
+  left: 0;
+  background-color: #333; /* Dark background color */
+  overflow-x: hidden; /* No horizontal scroll */
+  transition: 0.5s; /* Transition effect for sliding */
+  padding-top: 60px; /* Padding at the top */
+}
+
+.sidenav a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  background-color: #575757;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.main-content {
+  margin-left: 20px;
+  padding: 20px;
+}
+
+/* Copy Pasted */
+.container{
+	width: 100%;
+	min-height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 8%;
+}
+.container .row{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1100px;
+}
+.row section.col{
+	display: flex;
+	flex-direction: column;
+}
+.row section.left{
+	flex-basis: 35%;
+	min-width: 320px;
+	margin-right: 60px;
+}
+.row section.right{
+	flex-basis: 60%;
+}
+section.left .contactTitle h2{
+	position: relative;
+	font-size: 28px;
+	color: #ddd;
+	display: inline-block;
+	margin-bottom: 25px;
+}
+section.left .contactTitle h2::before{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 1px;
+	background-color: #888;
+	top: 120%;
+	left: 0;
+}
+section.left .contactTitle h2::after{
+	content: '';
+	position: absolute;
+	width: 25%;
+	height: 3px;
+	background-color: dodgerblue;
+	top: calc(120% - 1px);
+	left: 0;
+}
+section.left .contactTitle p{
+	font-size: 17px;
+	color: #ccc;
+	letter-spacing: 1px;
+	line-height: 1.2;
+	padding-bottom: 22px;
+}
+section.left .contactInfo{
+	margin-bottom: 16px;
+}
+.contactInfo .iconGroup{
+	display: flex;
+	align-items: center;
+	margin: 25px 0px;
+}
+.iconGroup .icon{
+	width: 45px;
+	height: 45px;
+	border: 2px solid dodgerblue;
+	border-radius: 50%;
+	margin-right: 20px;
+	position: relative;
+}
+.iconGroup .icon i{
+	font-size: 20px;
+	color: #ddd;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.iconGroup .details span{
+	display: block;
+	color: #888;
+	font-size: 18px;
+}
+.iconGroup .details span:nth-child(1){
+	text-transform: uppercase;
+	color: #ccc;
+}
+section.left .socialMedia{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 22px 0px 20px;
+}
+.socialMedia a{
+	width: 35px;
+	height: 35px;
+	text-decoration: none;
+	text-align: center;
+	margin-right: 15px;
+	border-radius: 5px;
+	background-color: dodgerblue;
+	transition: 0.4s;
+}
+.socialMedia a i{
+	color: #ddd;
+	font-size: 18px;
+	line-height: 35px;
+	border: 1px solid transparent;
+	transition-delay: 0.4s;
+}
+.socialMedia a:hover{
+	transform: translateY(-5px);
+	background-color: #2e2e2e;
+	color: dodgerblue;
+	border: 1px solid dodgerblue;
+}
+.socialMedia a:hover i{
+	color: dodgerblue;
+}
+
+/* Code for the right section (column) */
+
+
+
+@media(max-width: 1100px){
+	.messageForm .halfWidth{
+		flex-basis: 100%;
+	}
+}
+@media(max-width: 900px){
+	.container .row{
+		flex-wrap: wrap;
+	}
+	.row section.left, .row section.right{
+		flex-basis: 100%;
+		margin: 0px;
+	}
+}
+
+/* TypeWriter Styling */
+.typewriter-text{
+  color: white;
+  font-size: 2rem;
+}
+
+/* Contact  Page */
+
+
+.container-f form{
+  width: 720px;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background: rgb(58 55 55);
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+  padding-left: 25px;
+}
+
+.container-f form h1{
+  color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 700px;
+  text-align: center;
+}
+
+.container-f form input{
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background: none;
+  color: white;
+  border-bottom: 2px solid #fff;
+}
+
+.container-f form input::placeholder{
+  color: #ddd;
+}
+
+.container-f form #lastName,
+.container-f form #mobile{
+  margin-left: 30px;
+}
+
+.container-f form h4{
+  color: #fff;
+  font-weight: 300;
+  width: 600px;
+  margin-top: 20px;
+}
+
+.container-f form textarea{
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+textarea::-webkit-scrollbar{
+  width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+  background-color: rgba(194,194,194,0.713);
+}
+
+.container-f form #button{
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #000;
+  width: 100px;
+  padding: 0;
+  margin-right: 500px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.container-f form #button:hover{
+  background: transparent;
+  border: 2px solid rgb(13, 213, 234);
+  color: rgb(13, 213, 234);
+}
+
+
+/* Logout Btn */
+.logout {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #6b6b6b;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  font-family: "Protest Guerrilla", sans-serif;
+  transition: transform 0.2s ease-in-out;
+}
+.logout:hover {
+  transform: scale(1.1);
+  background-color: #b6b6b6;
+}
